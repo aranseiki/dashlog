@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <p>
+        <h1 class="text-muted">Sample Page</h1>
+    </p>
+    <div class="w3-responsive">
+        <table class="w3-table-all w3-striped w3-bordered w3-centered w3-small">
+            {% if data %}
+                {% for line in data %}
+                    <tr class="w3-hover-pink">
+                        {% for collumn in line %}
+                            <td style="border: 1px; border-style: solid; ">{{collumn}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </table>
+    </div>
+</body>
+</html>
